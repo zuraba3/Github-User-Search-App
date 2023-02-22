@@ -56,6 +56,10 @@ body {
   display: flex;
   align-items: center; }
 
+.form.dark {
+  background-color: #1e2a47;
+  box-shadow: none; }
+
 #user {
   border: none;
   outline: none;
@@ -67,8 +71,15 @@ body {
   color: #222731;
   width: 18.4rem; }
 
+#user.dark {
+  color: #ffffff;
+  background-color: transparent; }
+
 #user::placeholder {
   color: #4b6a9b; }
+
+#user.dark::placeholder {
+  color: #ffffff; }
 
 .btn {
   padding: 1.2rem 1.6rem;

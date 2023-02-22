@@ -76,6 +76,11 @@ body {
   align-items: center;
 }
 
+.form.dark {
+  background-color: $semi-dark;
+  box-shadow: none;
+}
+
 #user {
   border: none;
   outline: none;
@@ -88,8 +93,17 @@ body {
   width: 18.4rem;
 }
 
+#user.dark {
+  color: $white;
+  background-color: transparent;
+}
+
 #user::placeholder {
   color: $dark-sky;
+}
+
+#user.dark::placeholder {
+  color: $white;
 }
 
 .btn {
