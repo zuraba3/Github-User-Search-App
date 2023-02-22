@@ -64,3 +64,43 @@ body {
 #sun {
   display: none;
 }
+
+.form {
+  padding: 0.7rem 0.7rem 0.7rem 1.6rem;
+  width: 100%;
+  background-color: $white;
+  margin-top: 3.6rem;
+  box-shadow: 0rem 1.6rem 3rem -1rem rgba(70, 96, 187, 0.198567);
+  border-radius: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+#user {
+  border: none;
+  outline: none;
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 2.5rem;
+  margin-left: 0.9rem;
+  font-family: "Space Mono", monospace;
+  color: #222731;
+  width: 18.4rem;
+}
+
+#user::placeholder {
+  color: $dark-sky;
+}
+
+.btn {
+  padding: 1.2rem 1.6rem;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  background-color: $electric;
+  border: none;
+  color: $white;
+  cursor: pointer;
+  border-radius: 1rem;
+  margin-left: 0.7rem;
+}
