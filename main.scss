@@ -9,6 +9,7 @@ $light: #fefefe;
 $white: #ffffff;
 $dark: #141d2f;
 $semi-dark: #1e2a47;
+$error: #f74646;
 
 * {
   margin: 0;
@@ -117,4 +118,13 @@ body {
   cursor: pointer;
   border-radius: 1rem;
   margin-left: 0.7rem;
+}
+
+.error {
+  margin-top: 1rem;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  color: $error;
+  height: 2.5rem;
 }
