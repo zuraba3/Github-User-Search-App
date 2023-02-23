@@ -7,7 +7,7 @@ const themeText = document.querySelector(".theme-text");
 
 const input = document.getElementById("user");
 const button = document.querySelector(".btn");
-const form = document.querySelector(".form");
+const cards = document.querySelectorAll(".card");
 
 const octocat = {
   avatar_url: "https://avatars.githubusercontent.com/u/583231?v=4",
@@ -61,7 +61,7 @@ const flipTheme = (theme) => {
     themeText.style.color = "#1e2a47";
   }
   input.classList.toggle("dark");
-  form.classList.toggle("dark");
+  Array.from(cards).forEach((card) => card.classList.toggle("dark"));
 };
 
 moon.addEventListener("click", () => flipTheme("dark"));
