@@ -9,6 +9,21 @@ const input = document.getElementById("user");
 const button = document.querySelector(".btn");
 const cards = document.querySelectorAll(".card");
 
+const avatarMobile = document.querySelector(".avatar-mobile");
+const avatarDesktop = document.querySelector(".avatar-desktop");
+const nameElement = document.querySelector(".name");
+const login = document.querySelector(".login");
+const joindate = document.querySelector(".join-date");
+const bio = document.querySelector(".bio");
+const repos = document.getElementById("repos");
+const followers = document.getElementById("followers");
+const following = document.getElementById("following");
+const city = document.getElementById("city");
+const blog = document.getElementById("blog");
+const twitter = document.getElementById("twitter");
+const company = document.getElementById("company");
+const errorElement = document.querySelector(".error");
+
 const octocat = {
   avatar_url: "https://avatars.githubusercontent.com/u/583231?v=4",
   bio: null,
@@ -43,6 +58,64 @@ const octocat = {
   updated_at: "2023-01-22T12:13:51Z",
   url: "https://api.github.com/users/octocat",
 };
+
+input.addEventListener("input", () => {
+  errorElement.textContent = "";
+});
+
+// Manipulate Date
+
+const dateTransformer = (date) => {
+  const dateObject = new Date(date);
+  const dateString = dateObject.toDateString();
+  const [weekday, month, day, year] = dateString.split(" ");
+  return `Joined ${day} ${month} ${year}`;
+};
+
+// Display the user's information
+
+const displayInfo = (user) => {
+  avatarMobile.src = user.avatar_url;
+  avatarDesktop.src = user.avatar_url;
+  nameElement.textContent = user.name;
+  login.textContent = "@" + user.login;
+  const date = dateTransformer(user.created_at);
+  joindate.textContent = date;
+  bio.textContent =
+    user.bio ||
+    "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.";
+  repos.textContent = user.public_repos;
+  followers.textContent = user.followers;
+  following.textContent = user.following;
+  if (user.location) {
+    city.textContent = user.location;
+  } else {
+    city.textContent = "Not Available";
+    city.parentElement.style.opacity = 0.5;
+  }
+  if (user.twitter_username) {
+    twitter.textContent = user.twitter;
+  } else {
+    twitter.textContent = "Not Available";
+    twitter.parentElement.style.opacity = 0.5;
+  }
+  if (user.blog) {
+    blog.textContent = user.blog;
+    blog.href = user.blog;
+  } else {
+    blog.textContent = "Not Available";
+    blog.href = "#";
+    blog.parentElement.style.opacity = 0.5;
+  }
+  if (user.company) {
+    company.textContent = user.company;
+  } else {
+    company.textContent = "Not Available";
+    company.parentElement.style.opacity = 0.5;
+  }
+};
+
+displayInfo(octocat);
 
 const flipTheme = (theme) => {
   if (theme === "dark") {
@@ -81,8 +154,10 @@ button.addEventListener("click", async (event) => {
     // console.log(response);
     const user = response.data;
     input.value = "";
-    console.log(user);
+    // console.log(user);
+    displayInfo(user);
   } catch (error) {
     console.log("error");
+    errorElement.textContent = "No result";
   }
 });
