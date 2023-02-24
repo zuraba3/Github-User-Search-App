@@ -15,7 +15,7 @@ body {
   align-items: center;
   font-family: "Space Mono", monospace;
   padding: 0 2.4rem;
-  background: #f6f8ff; }
+  background: #f2f2f2; }
 
 .header {
   width: 100%;
@@ -143,3 +143,37 @@ body {
   line-height: 1.9rem;
   color: #697c9a;
   margin-top: 6px; }
+
+.bio {
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 2.5rem;
+  color: #4b6a9b;
+  margin-top: 3.3rem; }
+
+.stats {
+  width: 100%;
+  border-radius: 1rem;
+  background: #f6f8ff;
+  height: 8.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2.3rem;
+  column-gap: 3rem; }
+
+.stat {
+  text-align: center; }
+
+.stat-title {
+  font-weight: 400;
+  font-size: 1.1rem;
+  line-height: 1.6rem;
+  color: #4b6a9b;
+  text-transform: capitalize; }
+
+.amount {
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 2.3rem;
+  margin-top: 0.8rem; }

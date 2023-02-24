@@ -4,8 +4,8 @@ $electric: #0079ff;
 $gray: #697c9a;
 $dark-sky: #4b6a9b;
 $dark-blue: #2b3442;
-$light-bg: #f6f8ff;
-$light: #fefefe;
+$light-bg: #fefefe;
+$light: #f6f8ff;
 $white: #ffffff;
 $dark: #141d2f;
 $semi-dark: #1e2a47;
@@ -29,7 +29,7 @@ body {
   align-items: center;
   font-family: "Space Mono", monospace;
   padding: 0 2.4rem;
-  background: $light-bg;
+  background: #f2f2f2;
 }
 
 .header {
@@ -179,4 +179,43 @@ body {
   line-height: 1.9rem;
   color: $gray;
   margin-top: 6px;
+}
+
+.bio {
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 2.5rem;
+  color: $dark-sky;
+  margin-top: 3.3rem;
+}
+
+.stats {
+  width: 100%;
+  border-radius: 1rem;
+  background: $light;
+  height: 8.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2.3rem;
+  column-gap: 3rem;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-title {
+  font-weight: 400;
+  font-size: 1.1rem;
+  line-height: 1.6rem;
+  color: $dark-sky;
+  text-transform: capitalize;
+}
+
+.amount {
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 2.3rem;
+  margin-top: 0.8rem;
 }
