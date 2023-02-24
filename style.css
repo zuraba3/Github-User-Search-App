@@ -177,3 +177,24 @@ body {
   font-size: 1.6rem;
   line-height: 2.3rem;
   margin-top: 0.8rem; }
+
+.locations {
+  margin-top: 2.4rem;
+  display: grid;
+  grid-template-columns: auto;
+  row-gap: 1.6rem; }
+
+.location-info {
+  position: relative; }
+
+.location-text {
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 1.9rem;
+  color: #4b6a9b;
+  position: absolute;
+  top: 0;
+  left: 3.3rem; }
+
+.location-link {
+  text-decoration: none; }
