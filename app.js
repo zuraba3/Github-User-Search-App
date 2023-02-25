@@ -23,6 +23,7 @@ const blog = document.getElementById("blog");
 const twitter = document.getElementById("twitter");
 const company = document.getElementById("company");
 const errorElement = document.querySelector(".error");
+const stats = document.querySelector(".stats");
 
 const octocat = {
   avatar_url: "https://avatars.githubusercontent.com/u/583231?v=4",
@@ -125,6 +126,7 @@ const flipTheme = (theme) => {
     title.style.color = "#ffffff";
     themeText.innerHTML = "light";
     themeText.style.color = "#ffffff";
+    login.style.color = "#";
   } else if (theme === "sun") {
     moon.style.display = "block";
     sun.style.display = "none";
@@ -135,6 +137,9 @@ const flipTheme = (theme) => {
   }
   input.classList.toggle("dark");
   Array.from(cards).forEach((card) => card.classList.toggle("dark"));
+  blog.classList.toggle("dark");
+  login.style.color = "#0079FF";
+  stats.classList.toggle("dark");
 };
 
 moon.addEventListener("click", () => flipTheme("dark"));

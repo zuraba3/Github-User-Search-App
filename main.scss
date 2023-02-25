@@ -85,6 +85,16 @@ body {
   box-shadow: none;
 }
 
+.card.dark h2,
+.card.dark h3,
+.card.dark p {
+  color: $white;
+}
+
+#blog.dark {
+  color: $white;
+}
+
 #user {
   border: none;
   outline: none;
@@ -173,6 +183,10 @@ body {
   color: $electric;
 }
 
+.login.dark {
+  color: $white;
+}
+
 .join-date {
   font-weight: 400;
   font-size: 1.3rem;
@@ -199,6 +213,10 @@ body {
   align-items: center;
   margin-top: 2.3rem;
   column-gap: 3rem;
+}
+
+.stats.dark {
+  background-color: $dark;
 }
 
 .stat {
