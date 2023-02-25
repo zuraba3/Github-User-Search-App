@@ -8,14 +8,15 @@ html {
   font-size: 62.5%; }
 
 body {
-  width: 100vw;
+  max-width: 100vw;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-family: "Space Mono", monospace;
   padding: 0 2.4rem;
-  background: #f2f2f2; }
+  background: #f2f2f2;
+  padding-bottom: 7.9rem; }
 
 .header {
   width: 100%;
@@ -43,6 +44,10 @@ body {
   text-transform: uppercase;
   color: #4b6a9b; }
 
+#moon,
+#sun {
+  cursor: pointer; }
+
 #sun {
   display: none; }
 
@@ -50,7 +55,8 @@ body {
   width: 100%;
   background-color: #ffffff;
   box-shadow: 0rem 1.6rem 3rem -1rem rgba(70, 96, 187, 0.198567);
-  border-radius: 1.5rem; }
+  border-radius: 1.5rem;
+  margin-bottom: 2.4rem; }
 
 .form {
   padding: 0.7rem 0.7rem 0.7rem 1.6rem;
@@ -79,7 +85,7 @@ body {
   margin-left: 0.9rem;
   font-family: "Space Mono", monospace;
   color: #222731;
-  width: 18.4rem; }
+  width: 28.4rem; }
 
 #user.dark {
   color: #ffffff;
@@ -101,17 +107,14 @@ body {
   color: #ffffff;
   cursor: pointer;
   border-radius: 1rem;
-  margin-left: 0.7rem; }
+  margin-left: auto; }
 
-.error {
-  margin-top: 1rem;
-  font-weight: 400;
-  font-size: 1.2rem;
-  line-height: 2rem;
-  color: #f74646;
-  height: 2.5rem;
-  width: fit-content;
-  margin-right: auto; }
+.error-1 {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 2.2rem;
+  color: #f74646; }
 
 .user-info {
   padding: 3.2rem 2.4rem 4.8rem 2.4rem; }
@@ -212,3 +215,71 @@ body {
 
 .location-link {
   text-decoration: none; }
+
+@media (min-width: 768px) {
+  body {
+    padding: 0 9.8rem;
+    padding-bottom: 23.6rem; }
+  .header {
+    margin-top: 14rem; }
+  #user {
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    width: 35.4rem; }
+  .btn,
+  .login {
+    font-size: 1.6rem;
+    line-height: 2.3rem; }
+  .form {
+    padding: 1rem 1 rem 1 rem 3.2rem; }
+  .name {
+    font-size: 2.6rem;
+    line-height: 3.8rem; }
+  .user-info {
+    padding: 4rem; }
+  .general {
+    column-gap: 4rem; }
+  .join-date,
+  .location-text {
+    font-size: 1.5rem;
+    line-height: 2.2rem; }
+  .bio {
+    font-size: 1.5rem;
+    line-height: 2.5rem; }
+  .stat-title {
+    font-size: 1.3rem;
+    line-height: 1.9rem; }
+  .amount {
+    font-size: 2.2rem;
+    line-height: 3.2rem; }
+  .stats {
+    column-gap: 9.8rem; }
+  .stat {
+    text-align: left; }
+  .locations {
+    grid-template-columns: auto auto;
+    width: 100%; }
+  .location-info:nth-child(3) {
+    grid-column: 2 / 2;
+    grid-row: 1 / 2; }
+  .error-1 {
+    font-size: 1.5rem; } }
+
+@media (min-width: 1240px) {
+  body {
+    padding: 0;
+    padding-bottom: 17rem; }
+  .header,
+  .card {
+    width: 73rem; }
+  .avatar-mobile {
+    display: none; }
+  .avatar-desktop {
+    display: block;
+    width: 11.7rem;
+    height: 11.7rem;
+    border-radius: 50%; }
+  .user-info {
+    display: flex;
+    column-gap: 3.7rem;
+    padding: 4.8rem; } }

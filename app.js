@@ -22,8 +22,8 @@ const city = document.getElementById("city");
 const blog = document.getElementById("blog");
 const twitter = document.getElementById("twitter");
 const company = document.getElementById("company");
-const errorElement = document.querySelector(".error");
 const stats = document.querySelector(".stats");
+const error1 = document.querySelector(".error-1");
 
 const octocat = {
   avatar_url: "https://avatars.githubusercontent.com/u/583231?v=4",
@@ -163,6 +163,6 @@ button.addEventListener("click", async (event) => {
     displayInfo(user);
   } catch (error) {
     console.log("error");
-    errorElement.textContent = "No result";
+    error1.textContent = "No result";
   }
 });
